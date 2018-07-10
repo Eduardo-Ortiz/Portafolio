@@ -292,26 +292,26 @@ ul ul, ol ul {
                 <div class="right slider-arrow" onclick="plusDivs(1)">&#10095;</div>
 
                 <div class="badges-container" style="width:100%">               
-                  <span class="badge" onclick="currentDiv(1)"></span>
-                  <span class="badge" onclick="currentDiv(2)"></span>    
-                  <span class="badge" onclick="currentDiv(3)"></span>
-                  <span class="badge" onclick="currentDiv(4)"></span>
-                  <span class="badge" onclick="currentDiv(5)"></span>
-                  <span class="badge" onclick="currentDiv(6)"></span> 
-                  <span class="badge" onclick="currentDiv(7)"></span>
-                  <span class="badge" onclick="currentDiv(8)"></span>    
-                  <span class="badge" onclick="currentDiv(9)"></span>
-                  <span class="badge" onclick="currentDiv(10)"></span>
-                  <span class="badge" onclick="currentDiv(11)"></span>
-                  <span class="badge" onclick="currentDiv(12)"></span> 
-                  <span class="badge" onclick="currentDiv(13)"></span>
-                  <span class="badge" onclick="currentDiv(14)"></span>    
-                  <span class="badge" onclick="currentDiv(15)"></span>
-                  <span class="badge" onclick="currentDiv(16)"></span>
-                  <span class="badge" onclick="currentDiv(17)"></span>
-                  <span class="badge" onclick="currentDiv(18)"></span> 
-                  <span class="badge" onclick="currentDiv(19)"></span>
-                  <span class="badge" onclick="currentDiv(20)"></span> 
+                  <span class="badge" onclick="currentDiv(1); resetTimer()"></span>
+                  <span class="badge" onclick="currentDiv(2); resetTimer()"></span>    
+                  <span class="badge" onclick="currentDiv(3); resetTimer()"></span>
+                  <span class="badge" onclick="currentDiv(4); resetTimer()"></span>
+                  <span class="badge" onclick="currentDiv(5); resetTimer()"></span>
+                  <span class="badge" onclick="currentDiv(6); resetTimer()"></span> 
+                  <span class="badge" onclick="currentDiv(7); resetTimer()"></span>
+                  <span class="badge" onclick="currentDiv(8); resetTimer()"></span>    
+                  <span class="badge" onclick="currentDiv(9); resetTimer()"></span>
+                  <span class="badge" onclick="currentDiv(10); resetTimer()"></span>
+                  <span class="badge" onclick="currentDiv(11); resetTimer()"></span>
+                  <span class="badge" onclick="currentDiv(12); resetTimer()"></span> 
+                  <span class="badge" onclick="currentDiv(13); resetTimer()"></span>
+                  <span class="badge" onclick="currentDiv(14); resetTimer()"></span>    
+                  <span class="badge" onclick="currentDiv(15); resetTimer()"></span>
+                  <span class="badge" onclick="currentDiv(16); resetTimer()"></span>
+                  <span class="badge" onclick="currentDiv(17); resetTimer()"></span>
+                  <span class="badge" onclick="currentDiv(18); resetTimer()"></span> 
+                  <span class="badge" onclick="currentDiv(19); resetTimer()"></span>
+                  <span class="badge" onclick="currentDiv(20); resetTimer()"></span> 
                 </div>
               </div>
 
@@ -333,7 +333,11 @@ ul ul, ol ul {
             }
 
 
-
+            function resetTimer(n) {
+                window.clearTimeout(timer);
+                timer = null;
+                timer = setTimeout(startSlider, 9000);    
+            }
             
             function showDivs(n) {
               var i;
@@ -348,10 +352,11 @@ ul ul, ol ul {
                  dots[i].className = dots[i].className.replace(" badge-active", "");
               }
               x[slideIndex-1].style.display = "block";  
-              dots[slideIndex-1].className += " badge-active";
+              dots[slideIndex-1].className += " badge-active";            
             }
 
             
+            var timer;
 
             function startSlider() {
                 var i;
@@ -363,7 +368,7 @@ ul ul, ol ul {
                 if (slideIndex > x.length) {slideIndex = 1}    
                 x[slideIndex-1].style.display = "block"; 
                 showDivs(slideIndex); 
-                setTimeout(startSlider, 9000);    
+                timer = setTimeout(startSlider, 9000);    
             }
 
 
