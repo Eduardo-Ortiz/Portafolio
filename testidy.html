@@ -35,16 +35,339 @@
     .project-text {
       font-size:13px
     }   
+
+    ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: .5em;
+    -webkit-margin-after: .5em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+    .sec-ul {    
+    -webkit-margin-before: .1em;
+    -webkit-margin-after: .1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+    }
+ul ul, ol ul {
+    list-style-type: circle;
+}
+
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+
+
+.slider {
+    margin : auto;
+    position: relative;
+    margin-top: 3px;
+    margin-bottom: 25px;
+}
+
+
+.right {
+    top: 50%;
+    right: 0%;
+    transform: translate(0%,-50%);
+}
+
+.left {
+    top: 50%;
+    left: 0%;
+    transform: translate(0%,-50%);
+}
+
+.badge {
+    cursor: pointer;    
+    border: 2px solid rgba(255, 255, 255, 0.80)!important;
+    border-radius: 50%;   
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    background-color: transparent!important;
+    height: 15px;
+    width: 15px;
+    padding: 0;
+}
+
+.badge-active {
+    background-color: rgba(0, 0, 0, 0.65)!important;
+}
+
+.badges-container {
+    text-align: center!important;
+    padding: 0.01em 16px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%,0%);
+    -ms-transform: translate(-50%,0%);
+    margin-top: 16px!important;
+    margin-bottom: 16px!important;
+    font-size: 18px!important;
+}
+
+.badge:hover{
+    background-color: rgba(0, 0, 0, 1)!important;
+    border: 2px solid rgba(255, 255, 255, 1)!important;
+}
+
+.slider-arrow {
+    color: #fff!important;
+    background-color: rgba(0, 0, 0, 0.65)!important;
+    border: none;
+    display: inline-block;
+    padding: 12px 14px;
+    vertical-align: middle;
+    font-size : 20px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    position: absolute;    
+}
+
+.slider-arrow:hover{
+    background-color: #000000!important;    
+}
+
+.animation {
+    
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
   </style>
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
-
-
-
 <body>
-     
+        <nav class="navbar is-black">
+    
+            </nav>
+    <div style="margin-top:20px" class="container">
+        <img src="images/testidy/logo.png" width="150px"><br>
+        <span style="font-size:19px;font-weight:600">Control Escolar Mejorado</span>      
+        <div class="columns is-mobile is-multiline">
+            <div class="column is-6">              
+                    <p style="padding-bottom:6px;padding-top:6px"><b>Testidy es una plataforma que facilita el control escolar, principalmente la asistencia. Para eso se utilizan códigos QR</b> en las aulas que posteriormente son escaneados por los alumnos para confirmar que están dentro de la clase.</p>
+                    <p style="padding-bottom:6px;">Además de esto se incluyen otras funciones adicionales que son útiles para una institución educativa, que incluyen horarios, practicas, avisos, etc. A continuación se listan las principales características del proyecto:</p>
+                    <ul>
+                            <li><strong>aplicación web</strong>, con funciones como:
+                              <ul>
+                                <li>accesos separados para alumnos, maestros y administradores;</li>
+                                <li>registro de laboratorios con generación automática de códigos QR;</li>
+                                <li>función para pase de asistencia durante la hora de clase;</li>
+                                <li>generación de reportes de asistencia en tiempo real;</li>
+                                <li>horarios con detalles para conocer qué clase se lleva a cabo, bajo qué materia, en qué lugar y con qué maestro;</li>
+                                <li>notificaciones <i>push</i> para enviar avisos a alumnos específicos, grupos o a toda la escuela;</li>
+                                <li>sistema de exámenes integrado para realizar prácticas durante la hora clase;</li>
+                                <li>… y algunas funciones extra como separar aulas, almacenamiento de archivos, importación de alumnos y maestros a través de .csv, entre otras.</li>
+                              </ul>
+                            </li>
+                            <li><strong>aplicación móvil para Android</strong>, con funciones que incluyen:
+                              <ul>
+                                <li>escaneo de códigos QR para confirmar asistencia a clases;</li>
+                                <li>acceso directo a la página web de la escuela;</li>
+                                <li>función para solicitar aulas en cualquier fecha y hora disponible;</li>
+                                <li>historial para consultar avisos y notificaciones recibidas.</li>
+                              </ul>
+                            </li>
+                    </ul>
+            </div>
+            <div style="border-left: 1px solid #ddd;" class="column is-6">
+                <span style="font-size:22px;font-weight:600">Explicación Técnica</span><br>
+                <span style="font-size:19px;font-weight:500">Aplicación Web</span><br>
+                <ul>
+                    <li>ASP.NET con C#                      
+                            </li>
+                            <li>Sirve para 3 propósitos:
+                                <ul class="sec-ul">
+                                    <li>como una aplicación web para alumnos y maestros,</li>
+                                    <li>como API para la aplicación móvil,</li>    
+                                    <li>como panel de administrador.</li>                                                                                      
+                                </ul>
+                            </li>
+                            <li>Conexión con Firebase para enviar notificaciones push.                      
+                            </li>
+                            <li>Integración con jQuery para widget de selector de fechas y filtros de búsqueda con las funciones de autocompletar.                      
+                            </li>    
+                            <li>Servicios Web ASMX para distintas funciones.                      
+                            </li>                    
+                            <li>Base de datos en SQL Server.                      
+                            </li>
+        
+                </ul>
+                <span style="font-size:19px;font-weight:500">Aplicación Movil</span><br>
+                <ul>
+                    <li>Aplicación nativa desarrollada con Android Studio                     
+                    </li>
+                    <li>Lector de códigos QR integrado dentro de la aplicación.                    
+                    </li>
+                    <li>Integración fon Firebase para recibir notificaciones push.               
+                    </li>
+                    <li>Comunicación con el servidor a través de SOAP.                      
+                    </li>
+                </ul>
+                <span style="font-size:19px;font-weight:500">Tecnologias Utilizadas</span><br>
+                <div style="margin-top:5px">
+                        <img src="images/tech/aspnet.png" width="75px">
+                        <img src="images/tech/jquery.png" width="75px">
+                        <img src="images/tech/sqlserver.png" width="75px">
+                        <img src="images/tech/androidstudio.png" width="75px">
+                        <img src="images/tech/firebase.png" width="75px">
+                </div> 
+            </div>
+        </div>
+        <div class="has-text-centered">
+            <span style="font-size:22px;font-weight:600">Imagenes del Proyecto:</span><br>
+        </div>      
+        <div class="slider" style="max-width:700px">
+                <img class="mySlides animation" src="images/testidy/screenshots/1.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/2.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/3.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/4.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/5.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/6.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/7.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/8.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/9.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/10.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/11.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/12.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/13.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/14.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/15.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/16.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/17.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/18.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/19.jpg" style="width:100%">
+                <img class="mySlides animation" src="images/testidy/screenshots/20.jpg" style="width:100%">
+                <div class="left slider-arrow" onclick="plusDivs(-1)">&#10094;</div>
+                <div class="right slider-arrow" onclick="plusDivs(1)">&#10095;</div>
+
+                <div class="badges-container" style="width:100%">               
+                  <span class="badge" onclick="currentDiv(1)"></span>
+                  <span class="badge" onclick="currentDiv(2)"></span>    
+                  <span class="badge" onclick="currentDiv(3)"></span>
+                  <span class="badge" onclick="currentDiv(4)"></span>
+                  <span class="badge" onclick="currentDiv(5)"></span>
+                  <span class="badge" onclick="currentDiv(6)"></span> 
+                  <span class="badge" onclick="currentDiv(7)"></span>
+                  <span class="badge" onclick="currentDiv(8)"></span>    
+                  <span class="badge" onclick="currentDiv(9)"></span>
+                  <span class="badge" onclick="currentDiv(10)"></span>
+                  <span class="badge" onclick="currentDiv(11)"></span>
+                  <span class="badge" onclick="currentDiv(12)"></span> 
+                  <span class="badge" onclick="currentDiv(13)"></span>
+                  <span class="badge" onclick="currentDiv(14)"></span>    
+                  <span class="badge" onclick="currentDiv(15)"></span>
+                  <span class="badge" onclick="currentDiv(16)"></span>
+                  <span class="badge" onclick="currentDiv(17)"></span>
+                  <span class="badge" onclick="currentDiv(18)"></span> 
+                  <span class="badge" onclick="currentDiv(19)"></span>
+                  <span class="badge" onclick="currentDiv(20)"></span> 
+                </div>
+              </div>
+
+
+       
+    </div>  
+    
+    <script>
+            var slideIndex = 0;
+            
+            startSlider();            
+            
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+            
+            function currentDiv(n) {
+              showDivs(slideIndex = n);
+            }
+
+
+
+            
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("badge");
+              if (n > x.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                 x[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                 dots[i].className = dots[i].className.replace(" badge-active", "");
+              }
+              x[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " badge-active";
+            }
+
+            
+
+            function startSlider() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > x.length) {slideIndex = 1}    
+                x[slideIndex-1].style.display = "block"; 
+                showDivs(slideIndex); 
+                setTimeout(startSlider, 9000);    
+            }
+
+
+
+            </script>
 </body>
 </html>

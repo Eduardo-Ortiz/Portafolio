@@ -33,17 +33,46 @@
     .project-text {
       font-size:13px
     }   
+    .img-logo{
+      width: 135px;      
+    }
+
+
+    @media(max-width: 1280px) {
+      .project-text {
+        font-size: 12px;
+      }
+    }
+
+    @media(max-width: 1087px) {
+      .inverse {
+        flex-direction: column-reverse;
+        display: flex;
+      }
+      .logo {
+        text-align: center;
+      }
+      .img-logo{
+        width: 170px;  
+        margin-bottom: 5px;    
+      }
+      .row-grey {
+        padding-right: 25px;
+        padding-left: 25px;    
+      }
+      .row-white {
+        padding-right: 25px;
+        padding-left: 25px;    
+      }
+    }
   </style>
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
-
-
 <nav class="navbar is-black">
     
 </nav>
-
 <body>
     <div class="row-white has-text-centered">
       <h1 class="title">Eduardo Ortiz</h1>
@@ -52,15 +81,17 @@
     </div>
     <div class="row-grey">
         <div class="container">
-          <div class="columns" style="margin-bottom:-10px">
-            <div class="column is-4">
-                <img src="images/suffragium/logo.png" width="135px"><br>
+          <div class="columns is-mobile is-multiline" style="margin-bottom:-10px">
+            <div class="column is-12-mobile is-12-tablet is-4-desktop">
+              <div class="logo">
+                  <img class="img-logo" src="images/suffragium/logo.png">
+              </div>                
                 <h4 class="project-subtitle">Sistema de Encuestas</h4>
                 <span class="project-text">Proyecto realizado para capturar encuestas en campo. Incluye funciones como preguntas de distintos tipos, grabación de audio para verificación y captura e integración con Google Maps y GPS para designar áreas de trabajo, monitoreo de encuestadores y localización de puntos de captura. Contiene herramientas de gráficas y consultas para análisis de resultados.</span>
                 <h4 class="project-subtitle">Tecnología Utilizada</h4>
                 <span class="project-text">Se utilizó Laravel en el backend y Vue.js en el frontend. La aplicación móvil se desarrolló utilizando Android Studio (Java). La comunicación entre ambas partes se realiza con una API REST. Para la integración con mapas se utiliza la API de Google Maps y Firebase para notificaciones.</span>
             </div>    
-            <div class="column is-8">
+            <div class="column is-12-mobile is-12-tablet is-8-desktop has-text-centered">
                 <img src="images/suffragium/preview.png">
             </div>            
           </div>
@@ -81,12 +112,14 @@
     </div>
     <div class="row-white">
         <div class="container">
-          <div class="columns" style="margin-bottom:-10px">
-              <div class="column is-8">
+            <div class="columns is-mobile is-multiline inverse" style="margin-bottom:-10px">
+              <div class="column is-12-mobile is-12-tablet is-8-desktop has-text-centered">
                   <img src="images/ordenus/preview.png">
               </div> 
-            <div class="column is-4">
-                <img src="images/ordenus/logo.png" width="135px"><br>
+              <div class="column is-12-mobile is-12-tablet is-4-desktop ">
+                <div class="logo">
+                    <img src="images/ordenus/logo.png" class="img-logo">
+                </div>                
                 <h4 class="project-subtitle">Ordena en Restaurantes Facil y Rapido</h4>
                 <span class="project-text">Sistema diseñado para restaurantes, su objetivo principal es digitalizar el menú del establecimiento para mostrarlo a los clientes de una manera más rápida y sencilla, además de permitirles ordenar desde el dispositivo móvil que se conectara con un sistema en la cocina para agilizar los procesos.</span>
                 <h4 class="project-subtitle">Tecnología Utilizada</h4>
@@ -107,15 +140,17 @@
     </div>
     <div class="row-grey">
       <div class="container">
-        <div class="columns" style="margin-bottom:-10px">
-          <div class="column is-4">
-              <img src="images/heugen/logo.png" width="135px"><br>
+          <div class="columns is-mobile is-multiline" style="margin-bottom:-10px">
+            <div class="column is-12-mobile is-12-tablet is-4-desktop ">
+              <div class="logo">
+                  <img src="images/heugen/logo.png" class="img-logo">
+              </div>             
               <h4 class="project-subtitle">Estudio Inteligente</h4>
               <span class="project-text">Heugen es una aplicación Web diseñada para facilitar la tarea de memorizar contenidos de exámenes o conceptos. Para lograr esto se utiliza una técnica de evaluación y repetición con un algoritmo que analiza y da prioridad a los contenidos que se deben estudiar mas, en base a los resultados obtenidos</span>
               <h4 class="project-subtitle">Tecnología Utilizada</h4>
               <span class="project-text">Se utilizó el framework Laravel en el backend y Vue.js en el frontend. Los algoritmos de decisión fueron escritos utilizando PHP. En cuanto a la base de datos se utiliza MySQL.</span>
           </div>    
-          <div class="column is-8">
+          <div class="column is-12-mobile is-12-tablet is-8-desktop has-text-centered">
               <img src="images/heugen/preview.png">
           </div>            
         </div>
@@ -133,12 +168,14 @@
     </div>
     <div class="row-white">
         <div class="container">
-          <div class="columns" style="margin-bottom:-10px">
-              <div class="column is-8">
+            <div class="columns is-mobile is-multiline inverse" style="margin-bottom:-10px">
+              <div class="column is-12-mobile is-12-tablet is-8-desktop has-text-centered">
                   <img src="images/testidy/preview.png">
               </div> 
-            <div class="column is-4">
-                <img src="images/testidy/logo.png" width="135px"><br>
+            <div class="column is-12-mobile is-12-tablet is-4-desktop ">
+                <div class="logo">
+                  <img src="images/testidy/logo.png" class="img-logo">
+                </div>
                 <h4 class="project-subtitle">Control Escolar Mejorado</h4>
                 <span class="project-text">Plataforma diseñada para la Facultad de Ingeniería Mecánica y Eléctrica Unidad Norte de Monclova, Coahuila México. Integra un sistema web y una aplicación móvil para controlar la asistencia de alumnos a través de códigos QR, además de manejar horarios, exámenes y otros aspectos.</span>
                 <h4 class="project-subtitle">Tecnología Utilizada</h4>
@@ -151,6 +188,7 @@
               <img src="images/tech/jquery.png" width="75px">
               <img src="images/tech/sqlserver.png" width="75px">
               <img src="images/tech/androidstudio.png" width="75px">
+              <img src="images/tech/firebase.png" width="75px">
           </div> 
           <div class="has-text-centered" style="margin-top:15px">
              
@@ -159,15 +197,17 @@
       </div>
       <div class="row-grey">
           <div class="container">
-            <div class="columns" style="margin-bottom:-10px">
-              <div class="column is-4">
-                  <img src="images/studyall/logo.png" width="135px"><br>
+              <div class="columns is-mobile is-multiline" style="margin-bottom:-10px">
+                <div class="column is-12-mobile is-12-tablet is-4-desktop ">
+                  <div class="logo">
+                    <img src="images/studyall/logo.png" class="img-logo">
+                  </div>
                   <h4 class="project-subtitle">Plataforma de Contenidos</h4>
                   <span class="project-text">Sistema creado para administrar contenidos de materias o topicos de estudio. Estos contenidos se organizan en paquetes descargables, y pueden incluir examenes, preguntas, textos, etc. Ademas se incluye un chatbot que puede ser entrenado para resolver preguntas de cualquier tema.</span>
                   <h4 class="project-subtitle">Tecnología Utilizada</h4>
                   <span class="project-text">El servidor utiliza ASP.NET con C#. La aplicación móvil fue creada con Android Studio (Java). La comunicacion entre ambas partes se realiza a traves de Web Services con SOAP. Para la base de datos se utilizo SQL Server. El chatbot funciona gracias al lenguaje AIML.</span>
               </div>    
-              <div class="column is-8">
+              <div class="column is-12-mobile is-12-tablet is-8-desktop has-text-centered">
                   <img src="images/studyall/preview.png">
               </div>            
             </div>
