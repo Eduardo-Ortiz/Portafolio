@@ -288,8 +288,8 @@ ul ul, ol ul {
                 <img class="mySlides animation" src="images/testidy/screenshots/18.jpg" style="width:100%">
                 <img class="mySlides animation" src="images/testidy/screenshots/19.jpg" style="width:100%">
                 <img class="mySlides animation" src="images/testidy/screenshots/20.jpg" style="width:100%">
-                <div class="left slider-arrow" onclick="plusDivs(-1)">&#10094;</div>
-                <div class="right slider-arrow" onclick="plusDivs(1)">&#10095;</div>
+                <div class="left slider-arrow" onclick="plusDivs(-1); resetTimer()">&#10094;</div>
+                <div class="right slider-arrow" onclick="plusDivs(1); resetTimer()">&#10095;</div>
 
                 <div class="badges-container" style="width:100%">               
                   <span class="badge" onclick="currentDiv(1); resetTimer()"></span>
@@ -331,7 +331,6 @@ ul ul, ol ul {
             function currentDiv(n) {
               showDivs(slideIndex = n);
             }
-
 
             function resetTimer(n) {
                 window.clearTimeout(timer);
